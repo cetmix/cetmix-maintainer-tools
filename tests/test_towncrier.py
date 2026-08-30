@@ -11,14 +11,9 @@ from tools.oca_towncrier import _make_issue_format, _prepare_config, oca_towncri
 
 
 def test_make_issue_format():
-    assert (
-        _make_issue_format("OCA", "repo", "rst")
-        == "`#{issue} <https://github.com/OCA/repo/issues/{issue}>`_"
-    )
-    assert (
-        _make_issue_format("OCA", "repo", "md")
-        == "[#{issue}](https://github.com/OCA/repo/issues/{issue})"
-    )
+    # Cetmix: internal task numbers, not GitHub issue URLs
+    assert _make_issue_format("OCA", "repo", "rst") == "{issue}"
+    assert _make_issue_format("OCA", "repo", "md") == "{issue}"
 
 
 def test_prepare_config(tmp_path):
@@ -63,7 +58,7 @@ def test_oca_towncrier(tmp_path):
 
             **Bugfixes**
 
-            - Bugfix description. (`#50 <https://github.com/OCA/therepo/issues/50>`_)
+            - Bugfix description. (50)
         """
     )
 
@@ -98,6 +93,6 @@ def test_oca_towncrier_md(tmp_path):
         """\
             ## 14.0.1.0.1 (2021-12-31)
 
-            Bugfixes: Bugfix description. (50)
+            - Bugfixes: Bugfix description. (50)
         """
     )
