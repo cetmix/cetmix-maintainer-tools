@@ -26,7 +26,7 @@ OCA later: `71aa4ca` *Revert "Merge branch 'master' into master"* undid Cetmix f
 - `#663` / `676ec44` — `oca-create-branch-from-previous`
 - `#681` / `c15e855` — remove `repos_with_ids.txt`, `runbot_ids.py`, `add-badges.py`
 
-## Pre-sync blob SHAs (as of `8da8e14`)
+## Pre-sync blob SHAs (as of `278405c` / OCA `b8311a9`)
 
 Use only as a baseline when re-syncing from that tip; after a successful sync, refresh this table.
 
@@ -39,7 +39,7 @@ Use only as a baseline when re-syncing from that tip; after a successful sync, r
 | `dc63c60c5ab49f1ab5637d11427c208ef45be9e3` | `tests/data/readme_tests/addon_two_maintainers/README.expected-oca.rst` |
 | `b648bb09e509c277b4ce676d33e385cfe7223f4c` | `tools/oca_towncrier.py` |
 | `db6cc457bc775656244b775574b5dbee70adde8a` | `tools/towncrier-template.md` |
-| `0d0b592f182a5f97f30b2eea643221cf2c0e015f` | `tests/test_towncrier.py` |
+| `43d638bcdf231bdeda5c5d09bfe8114e341b720c` | `tests/test_towncrier.py` |
 
 `icon.svg` must be absent.
 
